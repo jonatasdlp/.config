@@ -23,6 +23,9 @@ return {
 			lua = { "stylua", stop_after_first = true },
 			javascript = { "prettier", stop_after_first = true },
 			swift = { "swiftformat", stop_after_first = true },
+			ruby = { "rubyfmt", stop_after_first = true },
+			sh = { "shellharden", stop_after_first = true },
+			bazel = { "buildifier", stop_after_first = true },
 		},
 		-- Set default options
 		default_format_opts = {
@@ -37,8 +40,9 @@ return {
 			},
 		},
 	},
-	init = function()
-		-- If you want the formatexpr, here is the place to set it
-		vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
-	end,
+	format_on_save = {
+		-- These options will be passed to conform.format()
+		timeout_ms = 500,
+		lsp_format = "fallback",
+	},
 }
