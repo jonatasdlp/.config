@@ -1,0 +1,85 @@
+# Import external theme files
+# import = [ "~/.config/alacritty/themes/themes/my_custom_theme.toml" ]
+
+# Window settings
+[window]
+padding.x = 10
+padding.y = 10
+dynamic_padding = true
+decorations = "Buttonless" # "Full", "Buttonless", "Transparent", "None"
+opacity = 0.9
+blur = true # Only works on macOS
+dimensions.columns = 120
+dimensions.lines = 30
+position.x = 100
+position.y = 50
+
+# Font settings
+[font]
+size = 18.0
+
+[font.normal]
+family = "FiraCode Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "FiraCode Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "FiraCode Nerd Font"
+style = "Italic"
+
+# Color scheme
+[colors]
+# Default colors
+[colors.primary]
+foreground = "#F8F8F2" # Dracula background
+background = "#282A36" # Dracula foreground
+
+# Cursor colors
+[colors.cursor]
+text = "CellBackground"
+cursor = "CellForeground"
+
+# Normal colors (ANSI)
+[colors.normal]
+black = "#000000"
+red = "#FF5555"
+green = "#50FA7B"
+yellow = "#F1FA8C"
+blue = "#BD93F9"
+magenta = "#FF79C6"
+cyan = "#8BE9FD"
+white = "#BFBFBF"
+
+# Bright colors (ANSI)
+[colors.bright]
+black = "#4D4D4D"
+red = "#FF6E67"
+green = "#5AF78E"
+yellow = "#F4F99D"
+blue = "#C6A0F6"
+magenta = "#FF92D0"
+cyan = "#9AEDFE"
+white = "#E6E6E6"
+
+# Scrolling settings
+[scrolling]
+history = 10000 # Number of lines in scrollback buffer
+multiplier = 3 # Scroll speed multiplier
+
+# Cursor settings
+[cursor]
+style = "Block" # "Block", "Underline", "Beam"
+blink_interval = 500 # Milliseconds
+
+# Key bindings
+[keyboard]
+bindings = [
+  { key = "Paste", mods = "Control|Shift", action = "Paste" },
+  { key = "Copy", mods = "Control|Shift", action = "Copy" },
+  { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" },
+  { key = "L", mods = "Control", action = "ClearLogNotice" },
+]
+
