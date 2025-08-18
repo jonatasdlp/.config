@@ -7,7 +7,7 @@ padding.x = 10
 padding.y = 10
 dynamic_padding = true
 decorations = "Buttonless" # "Full", "Buttonless", "Transparent", "None"
-opacity = 0.9
+opacity = 1.0
 blur = true # Only works on macOS
 dimensions.columns = 120
 dimensions.lines = 30
@@ -30,39 +30,10 @@ style = "Bold"
 family = "FiraCode Nerd Font"
 style = "Italic"
 
-# Color scheme
-[colors]
-# Default colors
-[colors.primary]
-foreground = "#F8F8F2" # Dracula background
-background = "#282A36" # Dracula foreground
-
-# Cursor colors
-[colors.cursor]
-text = "CellBackground"
-cursor = "CellForeground"
-
-# Normal colors (ANSI)
-[colors.normal]
-black = "#000000"
-red = "#FF5555"
-green = "#50FA7B"
-yellow = "#F1FA8C"
-blue = "#BD93F9"
-magenta = "#FF79C6"
-cyan = "#8BE9FD"
-white = "#BFBFBF"
-
-# Bright colors (ANSI)
-[colors.bright]
-black = "#4D4D4D"
-red = "#FF6E67"
-green = "#5AF78E"
-yellow = "#F4F99D"
-blue = "#C6A0F6"
-magenta = "#FF92D0"
-cyan = "#9AEDFE"
-white = "#E6E6E6"
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/dark_plus.toml"
+]
 
 # Scrolling settings
 [scrolling]
