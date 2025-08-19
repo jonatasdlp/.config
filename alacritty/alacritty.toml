@@ -32,7 +32,7 @@ style = "Italic"
 
 [general]
 import = [
-    "~/.config/alacritty/themes/themes/dark_plus.toml"
+    "~/.config/alacritty/themes/themes/gruvbox.toml"
 ]
 
 # Scrolling settings
