@@ -1,6 +1,6 @@
 return {
 	"stevearc/conform.nvim",
-	event = { "BufWritePre" },
+	event = { "BufWritePre", "BufReadPre", "BufNewFile" },
 	cmd = { "ConformInfo" },
 	keys = {
 		{
@@ -32,7 +32,16 @@ return {
 			lsp_format = "fallback",
 		},
 		-- Set up format-on-save
-		format_on_save = { timeout_ms = 500 },
+		format_on_save = function(bufnr)
+			local ignore_filetypes = { "oil" }
+			if vim.tbl_contains(ignore_filetypes, vim.bo[bufnr].filetype) then
+				return
+			end
+
+			return { timeout_ms = 500, lsp_fallback = true }
+		end,
+		log_level = vim.log.levels.ERROR,
+
 		-- Customize formatters
 		formatters = {
 			shfmt = {
