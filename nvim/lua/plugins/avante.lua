@@ -2,12 +2,9 @@ return {
 	"yetone/avante.nvim",
 	-- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
 	-- ⚠️ must add this setting! ! !
-	build = function()
-		return "make"
-	end,
+	build = "make",
 	event = "VeryLazy",
 	version = false, -- Never set this value to "*"! Never!
-	build = "make",
 	---@module 'avante'
 	---@type avante.Config
 	opts = {
