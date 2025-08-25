@@ -22,7 +22,7 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua", stop_after_first = true },
 			javascript = { "prettier", stop_after_first = true },
-			swift = { "swiftformat", stop_after_first = true },
+			swift = { "swiftformat" },
 			ruby = { "rubyfmt", stop_after_first = true },
 			sh = { "shellharden", stop_after_first = true },
 			bazel = { "buildifier", stop_after_first = true },
