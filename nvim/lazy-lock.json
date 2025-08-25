@@ -24,6 +24,7 @@
   "render-markdown.nvim": { "branch": "main", "commit": "c4ff9acddcf0f79b3187393319adb5cac5865bd3" },
   "snacks.nvim": { "branch": "main", "commit": "bc0630e43be5699bb94dadc302c0d21615421d93" },
   "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
+  "vim-fugitive": { "branch": "master", "commit": "61b51c09b7c9ce04e821f6cf76ea4f6f903e3cf4" },
   "vim-highlighter": { "branch": "main", "commit": "b12fa20268cf838ac18e295eb408d0112cf0e855" },
   "xcodebuild.nvim": { "branch": "main", "commit": "5e85042d3609423bf6fce70bcbb26f9955121b84" }
 }
