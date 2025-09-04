@@ -80,6 +80,17 @@ require("nvim-treesitter.configs").setup({
 	},
 })
 
+vim.diagnostic.config({
+	virtual_text = true, -- show inline messages
+	signs = true, -- show in the sign column
+	underline = true, -- underline the text
+	severity_sort = true, -- sort by severity
+	float = {
+		border = "rounded",
+		source = "always",
+	},
+})
+
 vim.o.number = true
 vim.o.background = "dark" -- or "light" for light mode
 vim.cmd([[colorscheme gruvbox]])
