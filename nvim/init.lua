@@ -1,3 +1,25 @@
+local map = vim.keymap.set
+local opts = { noremap = true, silent = true }
+
+-- Global leader mappings
+map("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
+map("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts)
+
+map("n", "<leader>gs", "<cmd>Git<cr>", opts)
+map("n", "<leader>gd", "<cmd>Gdiffsplit<cr>", opts)
+map("n", "<leader>gb", "<cmd>Git blame<cr>", opts)
+map("n", "<leader>gl", "<cmd>Git log<cr>", opts)
+map("n", "<leader>gp", "<cmd>Git push<cr>", opts)
+map("n", "<leader>gP", "<cmd>Git pull<cr>", opts)
+
+map("n", "<leader>ml", function()
+	require("lint").try_lint()
+end, { desc = "Lint file" })
+
+map("n", "<leader>f", function()
+	require("conform").format({ async = true })
+end, { desc = "Formating file" })
+
 require("config.lazy")
 
 require("lualine").setup({
