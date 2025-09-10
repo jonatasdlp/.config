@@ -12,6 +12,10 @@ map("n", "<leader>gl", "<cmd>Git log<cr>", opts)
 map("n", "<leader>gp", "<cmd>Git push<cr>", opts)
 map("n", "<leader>gP", "<cmd>Git pull<cr>", opts)
 
+map("n", "<leader>aa", "<cmd>AvanteChat<CR>", opts)
+map("n", "<leader>an", "<cmd>AvanteChatNew<CR>", opts)
+map("n", "<leader>as", "<cmd>AvanteStop<CR>", opts)
+
 map("n", "<leader>ml", function()
 	require("lint").try_lint()
 end, { desc = "Lint file" })

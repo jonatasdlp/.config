@@ -22,14 +22,32 @@ return {
 			--		max_tokens = 20480,
 			--	},
 			--},
+			ollama_deepseek_coder = {
+				__inherited_from = "ollama",
+				endpoint = "http://127.0.0.1:11434",
+				model = "deepseek-coder:6.7b",
+				extra = {
+					num_ctx = 8192,
+					temperature = 0.2,
+				},
+			},
+			ollama_deepseek_r1 = {
+				__inherited_from = "ollama",
+				endpoint = "http://127.0.0.1:11434",
+				model = "deepseek-r1:7b",
+				extra = {
+					num_ctx = 8192,
+					temperature = 0.2,
+				},
+			},
 			ollama = {
 				endpoint = "http://127.0.0.1:11434",
-				--model = "qwen3:4b",
 				model = "qwen2.5-coder:1.5b",
 				extra = {
 					num_ctx = 8192,
 					temperature = 0.2,
 				},
+				disable_tools = true,
 			},
 		},
 	},
