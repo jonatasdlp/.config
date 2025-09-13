@@ -1,0 +1,12 @@
+[[language]]
+name = "swift"           # or "text", "rust", etc. depending on what you want AI help in
+language-servers = ["lsp-ai"]
+
+[language-server.lsp-ai]
+command = "lsp-ai"
+args = ["--stdio"]
+
+[language-server.lsp-ai.config]
+provider = "ollama"
+model = "qwen2.5-coder:1.5b"
+max_tokens = 512
