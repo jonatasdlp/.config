@@ -22,10 +22,10 @@ return {
 			--		max_tokens = 20480,
 			--	},
 			--},
-			ollama_deepseek_coder = {
+			ollama_phi3 = {
 				__inherited_from = "ollama",
 				endpoint = "http://127.0.0.1:11434",
-				model = "deepseek-coder:6.7b",
+				model = "phi3:mini",
 				extra = {
 					num_ctx = 8192,
 					temperature = 0.2,
