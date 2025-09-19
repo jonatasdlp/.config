@@ -1,7 +1,5 @@
 return {
 	"yetone/avante.nvim",
-	-- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
-	-- ⚠️ must add this setting! ! !
 	build = "make",
 	event = "VeryLazy",
 	version = false, -- Never set this value to "*"! Never!
@@ -13,32 +11,34 @@ return {
 		--provider = "claude",
 		provider = "ollama",
 		providers = {
-			--claude = {
-			--	endpoint = "https://api.anthropic.com",
-			--	model = "claude-sonnet-4-20250514",
-			--	timeout = 30000, -- Timeout in milliseconds
-			--	extra_request_body = {
-			--		temperature = 0.75,
-			--		max_tokens = 20480,
-			--	},
-			--},
+			claude = {
+				endpoint = "https://api.anthropic.com",
+				model = "claude-sonnet-4-20250514",
+				timeout = 30000, -- Timeout in milliseconds
+				extra_request_body = {
+					temperature = 0.75,
+					max_tokens = 20480,
+				},
+			},
+			ollama_starcoder = {
+				__inherited_from = "ollama",
+				model = "starcoder2:7b ",
+				extra = {
+					num_ctx = 16000,
+				},
+				disable_tools = false,
+			},
 			ollama_phi3 = {
 				__inherited_from = "ollama",
-				endpoint = "http://127.0.0.1:11434",
 				model = "phi3:mini",
 				extra = {
-					num_ctx = 8192,
-					temperature = 0.2,
+					num_ctx = 16000,
 				},
+				disable_tools = false,
 			},
 			ollama_deepseek_r1 = {
 				__inherited_from = "ollama",
-				endpoint = "http://127.0.0.1:11434",
 				model = "deepseek-r1:7b",
-				extra = {
-					num_ctx = 8192,
-					temperature = 0.2,
-				},
 			},
 			ollama = {
 				endpoint = "http://127.0.0.1:11434",
