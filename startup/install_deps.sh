@@ -5,14 +5,32 @@ set -euo pipefail
 STARTUP_DIR="$HOME/.config/startup"
 BREW_RC="$STARTUP_DIR/.brewrc"
 NPM_RC="$STARTUP_DIR/.npm-globalrc"
+HOMEBREW_INSTALL_URL="https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh"
+
+is_safe_brew_package() {
+  [[ "$1" =~ ^[A-Za-z0-9@._+-]+(/[A-Za-z0-9@._+-]+)?$ ]]
+}
+
+is_safe_npm_spec() {
+  [[ "$1" =~ ^(@[A-Za-z0-9._-]+/)?[A-Za-z0-9._-]+(@[A-Za-z0-9._-]+)?$ ]]
+}
 
 ensure_homebrew() {
   if command -v brew >/dev/null 2>&1; then
     return
   fi
 
+  if ! command -v curl >/dev/null 2>&1; then
+    echo "[deps] Erro: curl nao encontrado para instalar Homebrew." >&2
+    exit 1
+  fi
+
   echo "[deps] Homebrew nao encontrado. Instalando..."
-  NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+  installer_path="$(mktemp)"
+  curl --proto '=https' --tlsv1.2 --fail --silent --show-error --location "$HOMEBREW_INSTALL_URL" -o "$installer_path"
+  NONINTERACTIVE=1 /bin/bash "$installer_path"
+  rm -f "$installer_path"
 
   if [[ -x /opt/homebrew/bin/brew ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -41,6 +59,10 @@ install_brew_packages() {
     case "$line" in
       formula:*)
         pkg="${line#formula:}"
+        if ! is_safe_brew_package "$pkg"; then
+          echo "- formula invalida, ignorando: $pkg"
+          continue
+        fi
         if brew list --formula "$pkg" >/dev/null 2>&1; then
           echo "- formula ok: $pkg"
         else
@@ -50,6 +72,10 @@ install_brew_packages() {
         ;;
       cask:*)
         pkg="${line#cask:}"
+        if ! is_safe_brew_package "$pkg"; then
+          echo "- cask invalido, ignorando: $pkg"
+          continue
+        fi
         if brew list --cask "$pkg" >/dev/null 2>&1; then
           echo "- cask ok: $pkg"
         else
@@ -83,8 +109,13 @@ install_npm_global_packages() {
 
     [[ -z "$spec" ]] && continue
 
+    if ! is_safe_npm_spec "$spec"; then
+      echo "- npm spec invalido, ignorando: $spec"
+      continue
+    fi
+
     echo "- npm install -g $spec"
-    npm install -g "$spec"
+    npm install -g -- "$spec"
   done < "$NPM_RC"
 }
 

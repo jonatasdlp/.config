@@ -5,7 +5,9 @@ set -euo pipefail
 SESSION_NAME="${1:-turb-dev}"
 TURB_DIR="$HOME/Developer/turb-ios"
 BACKEND_DIR="$HOME/Developer/AppBackend/app"
-FIGMA_MCP_CMD="npx cursor-talk-to-figma-socket"
+FIGMA_MCP_PACKAGE="cursor-talk-to-figma-socket@0.3.5"
+FIGMA_MCP_BIN="cursor-talk-to-figma-socket"
+FIGMA_MCP_CMD="npx --yes --package '$FIGMA_MCP_PACKAGE' '$FIGMA_MCP_BIN'"
 DEVELOPER_DIR="$HOME/Developer"
 
 # Proporcoes do layout (ajustadas para o esquema ideal da imagem)
