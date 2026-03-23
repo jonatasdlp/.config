@@ -78,6 +78,46 @@ The heart of this configuration is a modern Neovim setup built with [lazy.nvim](
    
    Lazy.nvim will automatically install all plugins on first launch.
 
+## 🍎 macOS Initial Setup
+
+This repo includes startup automation for a fresh macOS machine, including Homebrew and npm global packages.
+
+### Files used by startup
+
+- `~/.config/startup/.brewrc` - Homebrew formulas and casks
+- `~/.config/startup/.npm-globalrc` - npm global packages
+- `~/.config/startup/install_deps.sh` - installs dependencies from those manifests
+- `~/.config/startup/snapshot_deps.sh` - refreshes manifests from current machine
+- `~/.config/startup/macos_startup.sh` - base startup script (`--with-deps` installs dependencies)
+
+### First machine setup (fresh Mac)
+
+```bash
+~/.config/startup/macos_startup.sh --with-deps
+```
+
+### Update dependency manifests after changes
+
+```bash
+~/.config/startup/snapshot_deps.sh
+```
+
+### Install dependencies from manifests only
+
+```bash
+~/.config/startup/install_deps.sh
+```
+
+### Optional aliases (if configured in shell)
+
+```bash
+source ~/.zshrc
+startup
+firstsetup
+depsinstall
+depssnapshot
+```
+
 ## 🎯 Usage
 
 ### Getting Started with Neovim
@@ -125,4 +165,4 @@ This configuration prioritizes:
 
 ---
 
-*Last updated: 2025-01-06*
+*Last updated: 2026-03-23*

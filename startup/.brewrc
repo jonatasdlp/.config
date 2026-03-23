@@ -1,0 +1,39 @@
+# Homebrew packages (top-level)
+# Format:
+# - formula:<name>
+# - cask:<name>
+
+formula:aichat
+formula:aider
+formula:bazel
+formula:btop
+formula:coreutils
+formula:docker-compose
+formula:fd
+formula:helix
+formula:htop
+formula:jq
+formula:khal
+formula:lazygit
+formula:neovim
+formula:node
+formula:openjdk
+formula:pipx
+formula:ripgrep
+formula:ruby
+formula:rust
+formula:stylua
+formula:swiftformat
+formula:swiftlint
+formula:tmux
+formula:xcbeautify
+formula:xcode-build-server
+
+cask:docker-desktop
+cask:gimp
+cask:kitty
+cask:sikarugir
+cask:spotify
+cask:surfshark
+cask:tuist
+cask:zwift

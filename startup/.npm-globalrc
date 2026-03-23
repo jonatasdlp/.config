@@ -1,0 +1,7 @@
+# npm global packages
+# Keep one package spec per line.
+
+@openai/codex@0.88.0
+aicommits@1.11.0
+mcp-hub@4.2.1
+tree-sitter-cli@0.25.8
