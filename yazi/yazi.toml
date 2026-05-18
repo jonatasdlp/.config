@@ -1,0 +1,9 @@
+# yazi.toml
+[mgr]
+show_hidden = true
+
+[plugin]
+remote = "github:bennyyip/gruvbox-dark"
+
+[theme]
+scheme = "gruvbox-dark"
