@@ -6,8 +6,8 @@ return {
 			options = {
 				icons_enabled = true,
 				theme = "auto",
-				component_separators = { left = "", right = "" },
-				section_separators = { left = "", right = "" },
+				component_separators = { left = "", right = "" },
+				section_separators = { left = "", right = "" },
 				disabled_filetypes = {
 					statusline = {},
 					winbar = {},
@@ -36,12 +36,71 @@ return {
 				},
 			},
 			sections = {
-				lualine_a = { "mode" },
-				lualine_b = { "branch", "diff", "diagnostics" },
-				lualine_c = { "filename" },
-				lualine_x = { "encoding", "fileformat", "filetype" },
-				lualine_y = { "progress" },
-				lualine_z = { "location" },
+				lualine_a = {
+					{
+						"mode",
+						fmt = function(str)
+							return " " .. str
+						end,
+					},
+				},
+				lualine_b = {
+					{ "branch", icon = "" },
+					{
+						"diff",
+						symbols = {
+							added = " ",
+							modified = " ",
+							removed = " ",
+						},
+					},
+					{
+						"diagnostics",
+						sources = { "nvim_diagnostic" },
+						symbols = {
+							error = " ",
+							warn = " ",
+							info = " ",
+							hint = " ",
+						},
+					},
+				},
+				lualine_c = {
+					{
+						"filename",
+						file_status = true,
+						newfile_status = true,
+						path = 1,
+						symbols = {
+							modified = " ",
+							readonly = " ",
+							unnamed = " Sem nome",
+							newfile = " Novo",
+						},
+					},
+				},
+				lualine_x = {
+					{
+						function()
+							local format = vim.bo.fileformat
+							local icons = {
+								unix = "",
+								dos = "",
+								mac = "",
+							}
+							return (icons[format] or "") .. " " .. format
+						end,
+						icons_enabled = true,
+					},
+					{ "encoding", icon = "" },
+					{
+						"filetype",
+						icon_only = false,
+						padding = { left = 1, right = 1 },
+					},
+				},
+				lualine_y = { { "progress", icon = "", padding = { left = 1, right = 1 } } },
+				lualine_z = { { "location", icon = "", padding = { left = 1, right = 1 } } },
 			},
 			inactive_sections = {
 				lualine_a = {},

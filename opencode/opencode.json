@@ -6,5 +6,31 @@
 			"command": ["npx", "-y", "@upstash/context7-mcp", "--api-key", "${OPENCODE_KEY}"],
 			"enabled": true
 		}
+	},
+	"provider": {
+		"ollama": {
+			"npm": "@ai-sdk/openai-compatible",
+			"name": "Ollama (local)",
+			"options": {
+				"baseURL": "http://localhost:11434/v1"
+			},
+			"models": {
+				"gemma4:e2b": {
+					"name": "gemma4:e2b"
+				}
+			}
+		},
+		"mlx": {
+			"npm": "@ai-sdk/openai-compatible",
+			"name": "MLX (local)",
+			"options": {
+				"baseURL": "http://localhost:8080/v1"
+			},
+			"models": {
+				"default_model": {
+					"name": "Default"
+				}
+			}
+		}
 	}
 }
