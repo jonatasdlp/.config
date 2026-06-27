@@ -1,16 +1,17 @@
 {
 	"$schema": "https://opencode.ai/config.json",
+	"model": "mlx-lm/mlx-community/gemma-4-e2b-it-qat-OptiQ-4bit",
 	"mcp": {
 		"context7": {
 			"type": "local",
 			"command": ["npx", "-y", "@upstash/context7-mcp", "--api-key", "${OPENCODE_KEY}"],
-			"enabled": true
+			"enabled": false
 		}
 	},
 	"provider": {
 		"ollama": {
 			"npm": "@ai-sdk/openai-compatible",
-			"name": "Ollama (local)",
+			"name": "Ollama Gemma4:e2b (local)",
 			"options": {
 				"baseURL": "http://localhost:11434/v1"
 			},
@@ -20,15 +21,21 @@
 				}
 			}
 		},
-		"mlx": {
+		"mlx-lm": {
 			"npm": "@ai-sdk/openai-compatible",
-			"name": "MLX (local)",
+			"name": "MLX LM",
 			"options": {
 				"baseURL": "http://localhost:8080/v1"
 			},
 			"models": {
-				"default_model": {
-					"name": "Default"
+				"mlx-community/gemma-4-e4b-it-qat-OptiQ-4bit": {
+					"name": "mlx-community/gemma-4-e4b-it-qat-OptiQ-4bit"
+				},
+				"mlx-community/gemma-4-e2b-it-qat-OptiQ-4bit": {
+					"name": "mlx-community/gemma-4-e2b-it-qat-OptiQ-4bit"
+				},
+				"mlx-community/Qwen3.5-9B-MLX-4bit": {
+					"name": "mlx-community/Qwen3.5-9B-MLX-4bit"
 				}
 			}
 		}
