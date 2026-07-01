@@ -1,7 +1,10 @@
 # Homebrew packages (top-level)
 # Format:
+# - tap:<user/repo>
 # - formula:<name>
 # - cask:<name>
+
+tap:typewhisper/tap
 
 formula:aichat
 formula:aider
@@ -11,6 +14,7 @@ formula:coreutils
 formula:docker-compose
 formula:fd
 formula:helix
+formula:herdr
 formula:htop
 formula:jq
 formula:khal
@@ -36,4 +40,5 @@ cask:sikarugir
 cask:spotify
 cask:surfshark
 cask:tuist
+cask:typewhisper/tap/typewhisper
 cask:zwift

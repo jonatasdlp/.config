@@ -8,7 +8,11 @@ NPM_RC="$STARTUP_DIR/.npm-globalrc"
 HOMEBREW_INSTALL_URL="https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh"
 
 is_safe_brew_package() {
-  [[ "$1" =~ ^[A-Za-z0-9@._+-]+(/[A-Za-z0-9@._+-]+)?$ ]]
+  [[ "$1" =~ ^[A-Za-z0-9@._+-]+(/[A-Za-z0-9@._+-]+)*$ ]]
+}
+
+is_safe_tap_spec() {
+  [[ "$1" =~ ^[A-Za-z0-9._-]+/[A-Za-z0-9._-]+$ ]]
 }
 
 is_safe_npm_spec() {
@@ -40,6 +44,38 @@ ensure_homebrew() {
     echo "[deps] Erro: brew nao encontrado apos instalacao." >&2
     exit 1
   fi
+}
+
+install_taps() {
+  if [[ ! -f "$BREW_RC" ]]; then
+    echo "[deps] Arquivo nao encontrado: $BREW_RC"
+    return
+  fi
+
+  echo "[deps] Processando taps de $BREW_RC"
+  while IFS= read -r raw_line || [[ -n "$raw_line" ]]; do
+    line="${raw_line%%#*}"
+    line="${line%${line##*[![:space:]]}}"
+    line="${line#${line%%[![:space:]]*}}"
+
+    [[ -z "$line" ]] && continue
+
+    case "$line" in
+      tap:*)
+        tap="${line#tap:}"
+        if ! is_safe_tap_spec "$tap"; then
+          echo "- tap invalido, ignorando: $tap"
+          continue
+        fi
+        if brew tap | grep -qx "$tap"; then
+          echo "- tap ok: $tap"
+        else
+          echo "- adicionando tap: $tap"
+          HOMEBREW_NO_AUTO_UPDATE=1 brew tap "$tap"
+        fi
+        ;;
+    esac
+  done < "$BREW_RC"
 }
 
 install_brew_packages() {
@@ -121,6 +157,7 @@ install_npm_global_packages() {
 
 main() {
   ensure_homebrew
+  install_taps
   install_brew_packages
   install_npm_global_packages
   echo "[deps] concluido"
