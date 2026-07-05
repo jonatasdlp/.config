@@ -6,10 +6,10 @@
       "custom_name": null,
       "identity_cwd": "/Users/jonatas/.config",
       "public_pane_numbers": {
-        "9": 8,
-        "8": 7
+        "8": 7,
+        "9": 8
       },
-      "next_public_pane_number": 9,
+      "next_public_pane_number": 11,
       "public_tab_numbers": [
         3
       ],
@@ -30,11 +30,11 @@
             }
           },
           "panes": {
-            "8": {
-              "cwd": "/Users/jonatas/.config"
-            },
             "9": {
               "cwd": "/Users/jonatas"
+            },
+            "8": {
+              "cwd": "/Users/jonatas/.config"
             }
           },
           "zoomed": false,

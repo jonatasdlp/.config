@@ -797,3 +797,81 @@
 2026-07-04T14:59:16.748541Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t3"
 2026-07-04T14:59:19.816335Z  INFO herdr::pane: agent changed pane=8 previous_agent=Some(OpenCode) agent=None pgid=Some(39135)
 2026-07-04T14:59:21.756737Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/jonatas/.config/herdr/session.json workspaces=1
+2026-07-04T15:00:15.443322Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t3"
+2026-07-04T15:00:18.009200Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t3"
+2026-07-04T15:00:19.433852Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t3"
+2026-07-04T15:00:24.442313Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/jonatas/.config/herdr/session.json workspaces=1
+2026-07-04T15:01:21.460636Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-04T15:31:21.480653Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-04T16:01:21.452364Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-04T16:12:01.075163Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t3"
+2026-07-04T16:12:06.082014Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/jonatas/.config/herdr/session.json workspaces=1
+2026-07-04T16:12:28.675640Z  INFO herdr::app::actions: copied selection to clipboard
+2026-07-04T16:31:21.492550Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-04T16:42:54.714514Z  INFO herdr::server::headless: client resize client_id=2 cols=267 rows=40 cell_width_px=0 cell_height_px=0
+2026-07-04T16:42:54.774617Z  INFO herdr::server::headless: client resize client_id=2 cols=171 rows=40 cell_width_px=0 cell_height_px=0
+2026-07-04T16:42:59.001986Z  INFO herdr::server::headless: client resize client_id=2 cols=267 rows=64 cell_width_px=0 cell_height_px=0
+2026-07-04T16:43:01.669382Z  INFO herdr::server::headless: client resize client_id=2 cols=171 rows=40 cell_width_px=0 cell_height_px=0
+2026-07-04T16:43:03.232945Z  INFO herdr::server::headless: client resize client_id=2 cols=267 rows=64 cell_width_px=0 cell_height_px=0
+2026-07-04T17:01:21.501754Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-04T17:31:21.538156Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-04T18:01:21.561300Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-04T18:31:21.578847Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-04T19:01:21.601718Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-04T19:31:21.623938Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-04T20:01:21.596215Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-04T20:31:21.593942Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-04T21:01:21.608639Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-04T21:31:21.669822Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-04T22:01:21.708875Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-04T22:31:21.705971Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-04T23:01:21.720297Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-04T23:31:21.745290Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-04T23:53:57.534465Z  INFO herdr::server::headless: client resize client_id=2 cols=171 rows=40 cell_width_px=0 cell_height_px=0
+2026-07-04T23:54:00.112873Z  INFO herdr::server::headless: client resize client_id=2 cols=267 rows=64 cell_width_px=0 cell_height_px=0
+2026-07-04T23:54:02.607275Z  INFO herdr::server::headless: client resize client_id=2 cols=171 rows=40 cell_width_px=0 cell_height_px=0
+2026-07-04T23:54:04.333829Z  INFO herdr::server::headless: client resize client_id=2 cols=267 rows=64 cell_width_px=0 cell_height_px=0
+2026-07-04T23:57:57.677071Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t3"
+2026-07-04T23:58:02.684863Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/jonatas/.config/herdr/session.json workspaces=1
+2026-07-04T23:58:03.180055Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t3"
+2026-07-04T23:58:08.188385Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/jonatas/.config/herdr/session.json workspaces=1
+2026-07-05T00:01:21.768808Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-05T00:19:57.346612Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t3"
+2026-07-05T00:20:01.474312Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t3"
+2026-07-05T00:20:06.481171Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/jonatas/.config/herdr/session.json workspaces=1
+2026-07-05T00:20:26.205016Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t3"
+2026-07-05T00:20:31.209717Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/jonatas/.config/herdr/session.json workspaces=1
+2026-07-05T00:21:50.972928Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t3"
+2026-07-05T00:21:55.979714Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/jonatas/.config/herdr/session.json workspaces=1
+2026-07-05T00:22:03.975070Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t3"
+2026-07-05T00:22:08.981297Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/jonatas/.config/herdr/session.json workspaces=1
+2026-07-05T00:22:16.816311Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:server:reload-config" method="server.reload_config" changes_ui=true
+2026-07-05T00:22:16.818534Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:server:reload-config" method="server.reload_config"
+2026-07-05T00:22:20.193886Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t3"
+2026-07-05T00:22:21.542509Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t3"
+2026-07-05T00:22:22.959775Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t3"
+2026-07-05T00:22:27.968402Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/jonatas/.config/herdr/session.json workspaces=1
+2026-07-05T00:23:17.897780Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:server:reload-config" method="server.reload_config" changes_ui=true
+2026-07-05T00:23:17.899068Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:server:reload-config" method="server.reload_config"
+2026-07-05T00:23:20.157720Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:plugin" method="plugin.action.invoke" changes_ui=true
+2026-07-05T00:23:20.159557Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:plugin" method="plugin.action.invoke"
+2026-07-05T00:23:20.853190Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:plugin" method="plugin.pane.open" changes_ui=true
+2026-07-05T00:23:20.854146Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=10 rows=63 cols=116 scrollback_limit_bytes=10000000
+2026-07-05T00:23:20.858602Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=10 pid=71547
+2026-07-05T00:23:20.858961Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t3"
+2026-07-05T00:23:20.859097Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:plugin" method="plugin.pane.open"
+2026-07-05T00:23:22.289242Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=10 status="ExitStatus { code: 0, signal: None }"
+2026-07-05T00:23:22.289393Z  INFO herdr::pane: pane session terminated pane=10 pid=71547 signal=Hangup
+2026-07-05T00:23:23.704859Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:plugin" method="plugin.action.invoke" changes_ui=true
+2026-07-05T00:23:23.705333Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:plugin" method="plugin.action.invoke"
+2026-07-05T00:23:23.729706Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:plugin" method="plugin.pane.open" changes_ui=true
+2026-07-05T00:23:23.730075Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=11 rows=63 cols=116 scrollback_limit_bytes=10000000
+2026-07-05T00:23:23.733938Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=11 pid=71702
+2026-07-05T00:23:23.734023Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t3"
+2026-07-05T00:23:23.734135Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:plugin" method="plugin.pane.open"
+2026-07-05T00:23:25.542893Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=11 status="ExitStatus { code: 0, signal: None }"
+2026-07-05T00:23:25.545508Z  INFO herdr::pane: pane session terminated pane=11 pid=71702 signal=Hangup
+2026-07-05T00:23:30.552928Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/jonatas/.config/herdr/session.json workspaces=1
+2026-07-05T00:23:33.487854Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t3"
+2026-07-05T00:23:33.576322Z  INFO herdr::app::actions: copied selection to clipboard
+2026-07-05T00:23:38.494990Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/jonatas/.config/herdr/session.json workspaces=1

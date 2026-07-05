@@ -1,0 +1,62 @@
+[
+  {
+    "plugin_id": "herdr-file-viewer",
+    "name": "herdr-file-viewer",
+    "version": "1.7.0",
+    "min_herdr_version": "0.7.0",
+    "description": "A git-aware, read-only file viewer: a keyboard-driven TUI in a herdr split pane.",
+    "manifest_path": "/Users/jonatas/.config/herdr/plugins/github/herdr-file-viewer-c993314e2614/herdr-plugin.toml",
+    "plugin_root": "/Users/jonatas/.config/herdr/plugins/github/herdr-file-viewer-c993314e2614",
+    "enabled": true,
+    "platforms": [
+      "linux",
+      "macos"
+    ],
+    "build": [
+      {
+        "command": [
+          "/bin/sh",
+          "scripts/fetch-or-build.sh"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "open-file-viewer",
+        "title": "Open file viewer",
+        "description": "Open the git-aware file viewer in a split pane beside the current work.",
+        "command": [
+          "bash",
+          "scripts/open-file-viewer.sh"
+        ]
+      },
+      {
+        "id": "open-file-viewer-tab",
+        "title": "Open file viewer (tab)",
+        "description": "Open the git-aware file viewer in its own tab (switch to it if already open).",
+        "command": [
+          "bash",
+          "scripts/open-file-viewer-tab.sh"
+        ]
+      }
+    ],
+    "panes": [
+      {
+        "id": "file-viewer",
+        "title": "Files",
+        "placement": "split",
+        "command": [
+          "./target/release/herdr-file-viewer"
+        ]
+      }
+    ],
+    "source": {
+      "kind": "github",
+      "owner": "smarzban",
+      "repo": "herdr-file-viewer",
+      "resolved_commit": "0394fb6bb4bc04d5c70fa7cde82783fcaf25ceb7",
+      "managed_path": "/Users/jonatas/.config/herdr/plugins/github/herdr-file-viewer-c993314e2614",
+      "installed_unix_ms": 1783181498809
+    }
+  }
+]

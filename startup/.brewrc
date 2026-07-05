@@ -9,10 +9,13 @@ tap:typewhisper/tap
 formula:aichat
 formula:aider
 formula:bazel
+formula:bat
 formula:btop
 formula:coreutils
 formula:docker-compose
 formula:fd
+formula:git-delta
+formula:glow
 formula:helix
 formula:herdr
 formula:htop
