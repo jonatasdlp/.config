@@ -26,3 +26,6 @@ delivery = "system"
 key = "prefix+f"
 type = "shell"
 command = "herdr plugin action invoke open-file-viewer --plugin herdr-file-viewer"
+
+[theme.custom]
+panel_bg = "transparent"
