@@ -35,6 +35,8 @@ formula:swiftlint
 formula:tmux
 formula:xcbeautify
 formula:xcode-build-server
+formula:glow
+formula:mermaid-cli
 
 cask:docker-desktop
 cask:gimp
