@@ -6,7 +6,13 @@ return {
 	---@module 'avante'
 	---@type avante.Config
 	opts = {
-		provider = "fireworks",
+		provider = "opencode",
+		acp_providers = {
+			["opencode"] = {
+				command = "opencode",
+				args = { "acp" },
+			},
+		},
 		providers = {
 			claude = {
 				endpoint = "https://api.anthropic.com",
