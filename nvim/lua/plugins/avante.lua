@@ -6,48 +6,37 @@ return {
 	---@module 'avante'
 	---@type avante.Config
 	opts = {
-		-- add any opts here
-		-- for example
-		--provider = "claude",
-		provider = "ollama",
+		provider = "fireworks",
 		providers = {
 			claude = {
 				endpoint = "https://api.anthropic.com",
 				model = "claude-sonnet-4-20250514",
-				timeout = 30000, -- Timeout in milliseconds
+				timeout = 30000,
 				extra_request_body = {
 					temperature = 0.75,
 					max_tokens = 20480,
 				},
 			},
-			ollama_starcoder = {
-				__inherited_from = "ollama",
-				model = "starcoder2:7b ",
-				extra = {
-					num_ctx = 16000,
+			openai = {
+				api_key_name = "OPENAI_API_KEY",
+				endpoint = "https://api.openai.com/v1",
+				model = "gpt-5",
+				timeout = 30000,
+				extra_request_body = {
+					temperature = 0.7,
 				},
+			},
+			fireworks = {
+				__inherited_from = "openai",
+				api_key_name = "FIREWORKS_KEY",
+				endpoint = "https://api.fireworks.ai/inference/v1",
+				model = "accounts/fireworks/models/kimi-k2p6",
+				timeout = 60000,
 				disable_tools = false,
-			},
-			ollama_phi3 = {
-				__inherited_from = "ollama",
-				model = "phi3:mini",
-				extra = {
-					num_ctx = 16000,
+				extra_request_body = {
+					temperature = 0.6,
+					top_p = 0.95,
 				},
-				disable_tools = false,
-			},
-			ollama_deepseek_r1 = {
-				__inherited_from = "ollama",
-				model = "deepseek-r1:7b",
-			},
-			ollama = {
-				endpoint = "http://127.0.0.1:11434",
-				model = "qwen2.5-coder:1.5b",
-				extra = {
-					num_ctx = 8192,
-					temperature = 0.2,
-				},
-				disable_tools = true,
 			},
 		},
 	},
