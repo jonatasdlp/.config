@@ -5,6 +5,8 @@ return {
 	-- or                              , branch = '0.1.x',
 	dependencies = { "nvim-lua/plenary.nvim" },
 	keys = {
+		{ "<C-p>", "<cmd>Telescope find_files<cr>", desc = "Telescope find files" },
+		{ "<C-f>", "<cmd>Telescope live_grep<cr>", desc = "Telescope live grep" },
 		{ "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Telescope find files" },
 		{ "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Telescope live grep" },
 		{ "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Telescope buffers" },

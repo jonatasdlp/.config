@@ -16,7 +16,15 @@ return {
 		notifier = { enabled = true },
 		quickfile = { enabled = true },
 		scope = { enabled = true },
-		scroll = { enabled = true },
+		scroll = {
+			enabled = true,
+			keys = {
+				up = "<C-u>",
+				down = "<C-d>",
+				left = "<C-h>",
+				right = "<C-l>",
+			},
+		},
 		statuscolumn = { enabled = true },
 		words = { enabled = true },
 	},
