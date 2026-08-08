@@ -2,6 +2,28 @@
 	"$schema": "https://opencode.ai/config.json",
 	"model": "fireworks-ai/accounts/fireworks/models/kimi-k2p6",
 	"provider": {
+		"llm-hub": {
+			"npm": "@ai-sdk/openai-compatible",
+			"name": "LLM Hub",
+			"options": {
+				"baseURL": "http://127.0.0.1:4000/v1",
+				"apiKey": "llm-hub"
+			},
+			"models": {
+				"coding-best": {
+					"name": "coding-best"
+				},
+				"coding-fast": {
+					"name": "coding-fast"
+				},
+				"local-best": {
+					"name": "local-best"
+				},
+				"local-fast": {
+					"name": "local-fast"
+				}
+			}
+		},
 		"fireworks-ai": {
 			"models": {
 				"accounts/fireworks/models/kimi-k2p6": {
