@@ -31,8 +31,11 @@ family = "FiraCode Nerd Font"
 style = "Italic"
 
 [general]
+#import = [
+#    "~/.config/alacritty/themes/themes/gruvbox_material_hard_dark.toml"
+#]
 import = [
-    "~/.config/alacritty/themes/themes/gruvbox_material_hard_dark.toml"
+    "~/.config/alacritty/themes/themes/gruvbox_material_dark.toml"
 ]
 
 # Scrolling settings
